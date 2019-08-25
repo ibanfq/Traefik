@@ -389,7 +389,7 @@ EOF
   fi
 
   touch /opt/appdata/plexguide/traefikportainer.check
-  wget -q "https://${cname}.${domain}" -O "/opt/appdata/plexguide/traefikportainer.check"
+  wget -q "https://${cname}.${domain}" -O "/opt/appdata/plexguide/traefikportainer.check" --no-check-certificate
 
   # If Portainer Detection Failed
   if [[ $(cat /opt/appdata/plexguide/traefikportainer.check) == "" ]]; then
